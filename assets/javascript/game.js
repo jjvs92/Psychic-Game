@@ -33,7 +33,7 @@ document.onkeyup = function(event){
 
     console.log(compGuess);
 
-    // Creating if statement to only accept alpha keys (tried multiple things and did not resolve it)
+    // Creating if statement to only accept alpha keys 
         if(alphaKeys.indexOf(userGuess) >= 0){
     // If the user guesses the correct letter, they win, and game restarts 
 
@@ -61,18 +61,18 @@ document.onkeyup = function(event){
                     }}       
         
     // Setting condition if player runs out of guesses
-    if (guessesLeft == 0){
-        guessesLeft = 10;
-        losses++;
-        guessedLetters= [];
-        compGuess= computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        document.getElementById("losses").innerHTML= "losses: " + losses;
-        document.getElementById("guessesLeft").innerHTML= "Guesses Left: " + guessesLeft;
-        alert("Game Over!");
-    } 
-    // This will update the html to show the guessed letters
-    document.getElementById("guessedLetters").innerHTML= "Guessed letters: " + guessedLetters;
-        }
+            if (guessesLeft == 0){
+                guessesLeft = 10;
+                losses++;
+                guessedLetters= [];
+                compGuess= computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                document.getElementById("losses").innerHTML= "losses: " + losses;
+                document.getElementById("guessesLeft").innerHTML= "Guesses Left: " + guessesLeft;
+                alert("Game Over!");
+            } 
+            // This will update the html to show the guessed letters
+            document.getElementById("guessedLetters").innerHTML= "Guessed letters: " + guessedLetters;
+                }
         else{
             alert("The key enteres is invalid! Try a letter between a through z");
         }
