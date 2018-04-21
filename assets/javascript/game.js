@@ -34,7 +34,7 @@ document.onkeyup = function(event){
     console.log(compGuess);
 
     // Creating if statement to only accept alpha keys (tried multiple things and did not resolve it)
-    
+        if(alphaKeys.indexOf(userGuess) >= 0){
     // If the user guesses the correct letter, they win, and game restarts 
 
             if (userGuess === compGuess){
@@ -72,7 +72,10 @@ document.onkeyup = function(event){
     } 
     // This will update the html to show the guessed letters
     document.getElementById("guessedLetters").innerHTML= "Guessed letters: " + guessedLetters;
-
+        }
+        else{
+            alert("The key enteres is invalid! Try a letter between a through z");
+        }
 
 }
 
